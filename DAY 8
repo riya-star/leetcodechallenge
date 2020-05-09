@@ -1,0 +1,12 @@
+//Valid Perfect Square
+
+
+class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        float m1=sqrt(num);
+        float m2=floor(m1);
+        return ((m2-m1)==0);
+        
+    }
+};
