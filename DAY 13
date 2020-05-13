@@ -1,0 +1,38 @@
+class Solution {
+public:
+    string removeKdigits(string num, int k) {
+       string res=" ";
+        int min=0,i=0;
+        int n=num.length();
+        if(n==k)
+        {
+            return 0;
+        }
+        else
+        if(k==0)
+        {
+            return num;
+        }
+        else
+        {
+            int newmin=0;
+             while(newmin<=n&&k>0)
+                {
+                    for(int i=newmin;i<k;i++)
+                    {
+                         if(num[i]<num[min])
+                        {
+                            min=i;
+                        }
+                    }
+                  res.push_back(num[min]);   
+                 newmin=min+1;
+                 k=k-min;
+                 
+
+                }
+            return res;
+        }    
+      
+    }
+};
